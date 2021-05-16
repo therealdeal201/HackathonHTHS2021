@@ -117,7 +117,7 @@ def main():
     print('Created presentation with ID: {0}'.format(presentation.get('id')))
 
     #Access Presentation Copy from Google Slides API
-    presentation = service.presentations().get(presentationId='1Hs58Wxe0dadwYQW7AGNDFMF1m5Frl6gNGXr49fkUh9g').execute()
+    presentation = service.presentations().get(presentationId=presentation.get('id')).execute()
     # Get info for title slide
     titleSlide =presentation['slides'][0]
 
